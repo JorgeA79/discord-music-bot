@@ -33,7 +33,7 @@ module.exports = {
 			voiceChannel: channel,
 			connection: null,
 			songs: [],
-			volume: 2,
+			volume: 5,
 			playing: true
 		};
 		message.client.queue.set(message.guild.id, queueConstruct);
@@ -53,7 +53,7 @@ module.exports = {
 					play(queue.songs[0]);
 				})
 				.on('error', error => console.error(error));
-			dispatcher.setVolumeLogarithmic(queue.volume / 5);
+			
 			queue.textChannel.send(`🎶 Start playing: **${song.title}**`);
 		};
 
