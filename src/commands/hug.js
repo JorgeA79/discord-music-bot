@@ -11,6 +11,12 @@ module.exports = {
  	    "https://i.pinimg.com/originals/85/dc/ef/85dcef131af84b515106955e142df54e.gif",
  	    "https://i.imgur.com/r9aU2xv.gif",
  	    "https://i.pinimg.com/originals/4d/89/d7/4d89d7f963b41a416ec8a55230dab31b.gif"];
+	
+ 	   var hugifs =  [
+	    "https://media.tenor.com/images/b6d0903e0d54e05bb993f2eb78b39778/tenor.gif",
+ 	    "https://i.pinimg.com/originals/85/dc/ef/85dcef131af84b515106955e142df54e.gif",
+ 	    "https://i.imgur.com/r9aU2xv.gif",
+ 	    "https://i.pinimg.com/originals/4d/89/d7/4d89d7f963b41a416ec8a55230dab31b.gif"];		
     
 	    let member = message.mentions.members.first();
 	    if(!member) 
