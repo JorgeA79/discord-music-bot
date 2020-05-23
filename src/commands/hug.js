@@ -15,15 +15,28 @@ module.exports = {
 	    let member = message.mentions.members.first();
 	    if(!member) 
 	    return message.reply("Try mentioning the person");	
-		
+	    
      	
 	   var selecthugGif = hugifs[Math.floor(Math.random() * hugifs.length)];
-	   message.channel.send(`**${message.author.username}** hugged **${member.user.username}**`);
-		 
+	   
+	   if(message.author.username == member.user.username){	
+
 	   const embed = new Discord.MessageEmbed()
-            .setColor(0xC76CF5)
+            .setDescription(`**${message.author.username}** hugged itself...`)
+	    .setColor(0xC76CF5)
             .setImage(selecthugGif);
-           message.channel.send(embed);
+	    message.channel.send(embed);	   
+	   }else{
+	    const embed = new Discord.MessageEmbed()
+            .setDescription(`**${message.author.username}** hugged **${member.user.username}**`)
+	    .setColor(0xC76CF5)
+            .setImage(selecthugGif);
+	    message.channel.send(embed);
+	   
+	   }
+	   	
+	   
+           
     
     
 	}
