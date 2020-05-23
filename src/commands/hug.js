@@ -16,8 +16,8 @@ module.exports = {
 		 
      const embed = new Discord.MessageEmbed()
      .setColor(0xC76CF5)
-     .setImage(selecthugGif)
-     message.channel.send({embed});
+     .setImage(selecthugGif);
+     message.channel.send(embed);
     
     
 	}
