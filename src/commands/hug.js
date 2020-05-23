@@ -12,6 +12,10 @@ module.exports = {
  	   "https://i.imgur.com/r9aU2xv.gif",
  	   "https://i.pinimg.com/originals/4d/89/d7/4d89d7f963b41a416ec8a55230dab31b.gif"];
     
+		let member = message.mentions.members.first();
+		 if(!member) 
+		return message.reply("Try mentioning the person");	
+		
      	
 	var selecthugGif = hugifs[Math.floor(Math.random() * hugifs.length)];
 	message.channel.send(`**${message.author.username}** hugged `);
