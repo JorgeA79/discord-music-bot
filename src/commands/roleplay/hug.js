@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'hug',
-	description: 'Skip command.',
+	description: 'Hugging.',
 	cooldown: 5,
 	execute(message) {
   
@@ -10,13 +10,11 @@ module.exports = {
  	   "https://i.imgur.com/r9aU2xv.gif",
  	   "https://i.pinimg.com/originals/4d/89/d7/4d89d7f963b41a416ec8a55230dab31b.gif"];
     
-     let member = message.mentions.members.first();
-		 if(!member) 
-		 return message.reply("Try mentioning the person");			
-		 var selecthugGif = hugifs[Math.floor(Math.random() * hugifs.length)];
-		 message.channel.send(`**${message.author.username}** hugged **${member.user.username}**`);
+     	
+	var selecthugGif = hugifs[Math.floor(Math.random() * hugifs.length)];
+	message.channel.send(`**${message.author.username}** hugged `);
 		 
-     const embed = new Discord.RichEmbed()
+     const embed = new Discord.MessageEmbed()
      .setColor(0xC76CF5)
      .setImage(selecthugGif)
      message.channel.send({embed});
